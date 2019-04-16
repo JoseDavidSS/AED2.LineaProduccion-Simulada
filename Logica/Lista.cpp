@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Lista.h"
 #include "Nodo.h"
+#include <stdlib>
 
 void Lista::insertarNodo(string proceso, int tiempo){
 
