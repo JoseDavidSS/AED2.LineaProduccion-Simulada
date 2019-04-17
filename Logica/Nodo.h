@@ -17,10 +17,12 @@ public:
 
     string proceso;
     int tiempo;
+    bool estado;
 
-    Nodo(string procesos, int tiempos){
+    Nodo(string procesos, int tiempos, bool estados){
         proceso = procesos;
         tiempo = tiempos;
+        estado = estados;
     }
 
     Nodo* next = nullptr;
@@ -32,6 +34,10 @@ public:
 
     void setTiempo(int point);
     int getTiempo();
+
+    void setEstadoF();
+    void setEstadoT();
+    bool getEstado();
 
 
 

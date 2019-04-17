@@ -19,11 +19,13 @@ public:
 
     int getLargo();
     void setLargo(int largo);
-    void insertarNodo (string proceso, int tiempo);
+    void insertarNodo (string proceso, int tiempo, bool estado);
     void eliminarNodo (string proceso);
     void mostrarLista ();
-
+    void actualizar();
+    int buscarNodo(string proceso, Lista* linea);
 };
 
 
 #endif //MEMORIA_VIRTUAL_LISTA_H
+

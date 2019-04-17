@@ -19,3 +19,12 @@ void Nodo::setTiempo(int tiempo){
 int Nodo::getTiempo(){
     return this->tiempo;
 }
+bool Nodo::getEstado(){
+    return this->estado;
+}
+void Nodo::setEstadoF(){
+    this->estado = false;
+}
+void Nodo::setEstadoT(){
+    this->estado = true;
+}
