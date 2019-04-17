@@ -5,10 +5,8 @@
 #include <iostream>
 #include "Lista.h"
 #include "Nodo.h"
-#include <stdio.h>
 
-
-void Lista::insertarNodo(string proceso, int tiempo,bool estado){
+void Lista::insertarNodo(string proceso, int tiempo, bool estado){
 
     if (this->head == nullptr){
         this->head = new Nodo(proceso, tiempo, estado);
@@ -74,7 +72,6 @@ int Lista::buscarNodo(string proceso, Lista* linea){
     }
 }
 void Lista::actualizar(){
-    printf("esta");
     Nodo* tmp = this->head;
     int i;
     for(i=1; i==6; i++){

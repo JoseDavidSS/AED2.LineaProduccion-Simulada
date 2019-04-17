@@ -8,11 +8,6 @@
 
 int main(int argc, char *argv[]){
 
-    Lista* linea1 = new Lista;
-    linea1->insertarNodo("A", 5);
-    linea1->insertarNodo("B", 8);
-    linea1->mostrarLista();
-
     QApplication a(argc, argv);
         VentanaPrincipal w;
         w.show();

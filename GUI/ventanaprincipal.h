@@ -19,9 +19,11 @@ class VentanaPrincipal : public QMainWindow
 
 public:
     int contador = 1;
+
     explicit VentanaPrincipal(QWidget *parent = nullptr);
     ~VentanaPrincipal();
     void agregarLineaProduccion();
+    void agregarElementoLineaProduccion(Lista* linea);
 
 private slots:
     void on_pushButton_4_clicked();

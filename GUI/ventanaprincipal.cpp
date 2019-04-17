@@ -81,3 +81,7 @@ void VentanaPrincipal::on_pushButton_4_clicked()
 {
     agregarLineaProduccion();
 }
+
+void VentanaPrincipal::agregarElementoLineaProduccion(Lista* linea){
+
+}
