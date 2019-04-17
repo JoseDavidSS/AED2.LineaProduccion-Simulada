@@ -52,15 +52,17 @@ void Lista::mostrarLista(){
     }else{
         Nodo* tmp = this->head;
         while (tmp != nullptr){
-            cout << tmp->getProceso() << endl;
+            cout << tmp->getProceso();
+            cout << tmp->getTiempo();
+            cout << tmp->getEstado() << endl;
             tmp = tmp->next;
         }
     }
 }
-int Lista::buscarNodo(string proceso, Lista* linea){
+/*int Lista::buscarNodo(string proceso, Lista* linea){
     int posicion = 1;
     Nodo* tmp = this->head;
-    for(posicion; posicion==6;posicion++ ){
+    for(posicion =1; posicion==6; posicion++ ){
         if(tmp->getProceso()==proceso){
             return posicion;
         }
@@ -71,14 +73,49 @@ int Lista::buscarNodo(string proceso, Lista* linea){
         }
     }
 }
+*/
 void Lista::actualizar(){
-    Nodo* tmp = this->head;
+    printf("hola");
     int i;
-    for(i=1; i==6; i++){
+    int a =0;
+    Nodo* tmp = this->head;
+    while(tmp!= NULL){
         if(tmp->getEstado() == true)
             tmp->setTiempo(tmp->getTiempo()-5);
+            tmp = tmp->next;
+            a++;
+            i++;
+        if(tmp->getTiempo()<=0){
+            this->eliminarNodo(tmp->getProceso());
+            tmp = tmp ->next;
+            i++;
+        }
         else{
             tmp = tmp->next;
+            i++;
         }
     }
+    if(a>=3 && i>=3){
+     verificarEstado();
+    }
+    else{
+        NULL;
+    }
+    i=0;
+    a=0;
+
 }
+void Lista::verificarEstado(){
+    Nodo* tmp = this->head;
+    while(tmp!= NULL){
+        if(tmp->getEstado() == true){
+            tmp->setEstadoF();
+            tmp->next->next->setEstadoT();
+            break;
+        }
+        else{
+            tmp = tmp->next;
+
+         }
+      }
+   }
