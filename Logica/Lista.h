@@ -24,6 +24,7 @@ public:
     void mostrarLista ();
     void actualizar();
     int buscarNodo(string proceso, Lista* linea);
+    void verificarEstado();
 };
 
 

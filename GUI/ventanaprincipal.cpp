@@ -1,6 +1,6 @@
 #include "ventanaprincipal.h"
 #include "ui_ventanaprincipal.h"
-#include "/home/jose/CLionProjects/Memoria-Virtual/Logica/Lista.h"
+#include "/home/chus/CLionProjects/Memoria-Virtual/Logica/Lista.h"
 
 VentanaPrincipal::VentanaPrincipal(QWidget *parent) :
     QMainWindow(parent),

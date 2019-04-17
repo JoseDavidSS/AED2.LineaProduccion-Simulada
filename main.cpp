@@ -8,12 +8,28 @@
 
 int main(int argc, char *argv[]){
 
-    QApplication a(argc, argv);
+    Lista* lista = new Lista;
+    lista->mostrarLista();
+    lista->insertarNodo("a", 50, true);
+    lista->insertarNodo("b", 50, true);
+    lista->insertarNodo("c", 10, true);
+    lista->insertarNodo("d", 40, false);
+    lista->insertarNodo("e", 60, false);
+    lista->insertarNodo("f", 30, false);
+    lista->mostrarLista();
+    lista->actualizar();
+    lista->mostrarLista();
+    lista->actualizar();
+    lista->mostrarLista();
+
+
+    /*QApplication a(argc, argv);
         VentanaPrincipal w;
         w.show();
         QTime time = QTime::currentTime();
         qsrand((uint)time.msec());
 
-        return a.exec();
+        return a.exec();*/
+
 }
 
