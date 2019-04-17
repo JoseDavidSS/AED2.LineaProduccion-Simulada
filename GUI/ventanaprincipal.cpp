@@ -95,6 +95,9 @@ void VentanaPrincipal::agregarElementoLineaProduccion(string linea){
     }
     if (linea == "Linea 2"){
         this->linea2->insertarNodo(proceso,tiempo,true);
+        cout << linea2->head->getProceso();
+        cout << linea2->head->getTiempo();
+        cout << linea2->head->getEstado() << std::endl;
     }
     if (linea == "Linea 3"){
         this->linea3->insertarNodo(proceso,tiempo,true);
