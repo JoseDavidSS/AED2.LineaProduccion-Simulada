@@ -48,7 +48,7 @@ void Lista::eliminarNodo(string proceso){
 
 void Lista::mostrarLista(){
     if (this->head == nullptr){
-        printf("Lista nula");
+        printf("Lista nula\n");
     }else{
         Nodo* tmp = this->head;
         while (tmp != nullptr){
@@ -75,7 +75,7 @@ void Lista::mostrarLista(){
 }
 */
 void Lista::actualizar(){
-    printf("hola");
+    printf("hola\n");
     int i;
     int a =0;
     Nodo* tmp = this->head;
@@ -118,4 +118,62 @@ void Lista::verificarEstado(){
 
          }
       }
-   }
+}
+
+void Lista::actualizar2() {
+    cout<<"______"<<endl;
+    this->actualizarVerdaderos();
+    this->borrarCompletados();
+    this->seleccionarVerdaderos();
+    this->mostrarLista();
+
+}
+
+void Lista::actualizarVerdaderos() {
+    Nodo* tmp = this->head;
+    while(tmp!= nullptr){
+        if(tmp->getEstado() == 1){
+            tmp->setTiempo(tmp->getTiempo() - 5);
+        }
+        tmp = tmp->next;
+    }
+}
+
+void Lista::borrarCompletados() {
+    if(this->head->tiempo <= 0){
+        this->head = this->head->next;
+    }
+    Nodo* tmp = this->head;
+    while(tmp->next != nullptr){
+        if(tmp->next->tiempo <= 0){
+            if(tmp->next->next == nullptr){
+                tmp->next = nullptr;
+                this->largo--;
+            } else{
+                tmp->next = tmp->next->next;
+                this->largo--;
+            }
+        }
+        tmp = tmp->next;
+    }
+}
+
+void Lista::seleccionarVerdaderos() {
+    Nodo* tmp = this->head;
+    int i = 0;
+    while (tmp != nullptr){
+        if(tmp->estado){
+            i += 1;
+        }
+        tmp = tmp->next;
+    }
+    tmp = this->head;
+    while (tmp != nullptr && i != 3){
+        if(!tmp->estado){
+            tmp->setEstadoT();
+            i += 1;
+        }
+        tmp = tmp->next;
+    }
+
+}

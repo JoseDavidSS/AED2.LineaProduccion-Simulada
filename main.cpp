@@ -16,11 +16,8 @@ int main(int argc, char *argv[]){
     lista->insertarNodo("d", 40, false);
     lista->insertarNodo("e", 60, false);
     lista->insertarNodo("f", 30, false);
-    lista->mostrarLista();
-    lista->actualizar();
-    lista->mostrarLista();
-    lista->actualizar();
-    lista->mostrarLista();
+    lista->actualizar2();
+    lista->actualizar2();
 
 
     QApplication a(argc, argv);

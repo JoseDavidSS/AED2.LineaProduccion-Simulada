@@ -25,6 +25,14 @@ public:
     void actualizar();
     int buscarNodo(string proceso, Lista* linea);
     void verificarEstado();
+    void actualizar2();
+
+private:
+    void actualizarVerdaderos();
+    void borrarCompletados();
+    void seleccionarVerdaderos();
+
+
 };
 
 
