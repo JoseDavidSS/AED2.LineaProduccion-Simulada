@@ -24,6 +24,33 @@ void Lista::insertarNodo(string proceso, int tiempo, bool estado){
     }
 }
 
+void Lista::insertarNodo(string proceso, int tiempo) {
+    if (this->head == nullptr) {
+        this->head = new Nodo(proceso, tiempo, true);
+        this->largo++;
+    }else{
+        Nodo* tmp = this->head;
+        int i = this->contarActivos();
+
+        if(i == 3){
+            this->dormirPrimerVerdadero();
+        }
+
+        while (tmp->next != nullptr){
+            if(tmp->getEstado()){
+                i++;
+            }
+            tmp = tmp->next;
+        }
+
+        tmp->next = new Nodo(proceso, tiempo, true);
+        this->largo++;
+    }
+
+}
+
+
+
 void Lista::eliminarNodo(string proceso){
     if (this->head == nullptr){
         printf("No hay procesos para eliminar");
@@ -50,6 +77,7 @@ void Lista::mostrarLista(){
     if (this->head == nullptr){
         printf("Lista nula\n");
     }else{
+        cout <<"__________________"<<endl;
         Nodo* tmp = this->head;
         while (tmp != nullptr){
             cout << tmp->getProceso();
@@ -175,5 +203,28 @@ void Lista::seleccionarVerdaderos() {
         }
         tmp = tmp->next;
     }
+}
 
+void Lista::dormirPrimerVerdadero() {
+    Nodo* tmp = this->head;
+    bool i = true;
+    while (tmp->next != nullptr && i){
+        if(tmp->getEstado()){
+            tmp->estado = false;
+            i = false;
+        }
+        tmp = tmp->next;
+    }
+}
+
+int Lista::contarActivos() {
+    Nodo* tmp = this->head;
+    int i = 0;
+    while (tmp != nullptr){
+        if(tmp->getEstado()){
+            i++;
+        }
+        tmp = tmp->next;
+    }
+    return i;
 }
