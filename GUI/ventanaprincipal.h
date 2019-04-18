@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <string>
-#include "/home/jose/CLionProjects/Memoria-Virtual/Logica/Lista.h"
+#include "../Logica/Lista.h"
 
 
 using namespace std;

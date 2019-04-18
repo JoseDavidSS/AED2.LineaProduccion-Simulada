@@ -1,6 +1,6 @@
 #include "ventanaprincipal.h"
 #include "ui_ventanaprincipal.h"
-#include "/home/jose/CLionProjects/Memoria-Virtual/Logica/Lista.h"
+#include "../Logica/Lista.h"
 #include <iostream>
 
 
