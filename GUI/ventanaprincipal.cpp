@@ -92,6 +92,9 @@ void VentanaPrincipal::agregarElementoLineaProduccion(string linea){
 
     if (linea == "Linea 1"){
         this->linea1->insertarNodo(proceso,tiempo,true);
+        cout << linea1->head->getProceso();
+        cout << linea1->head->getTiempo();
+        cout << linea1->head->getEstado() << std::endl;
     }
     if (linea == "Linea 2"){
         this->linea2->insertarNodo(proceso,tiempo,true);
@@ -101,18 +104,30 @@ void VentanaPrincipal::agregarElementoLineaProduccion(string linea){
     }
     if (linea == "Linea 3"){
         this->linea3->insertarNodo(proceso,tiempo,true);
+        cout << linea3->head->getProceso();
+        cout << linea3->head->getTiempo();
+        cout << linea3->head->getEstado() << std::endl;
 
     }
     if (linea == "Linea 4"){
         this->linea4->insertarNodo(proceso,tiempo,true);
+        cout << linea4->head->getProceso();
+        cout << linea4->head->getTiempo();
+        cout << linea4->head->getEstado() << std::endl;
 
     }
     if (linea == "Linea 5"){
         this->linea5->insertarNodo(proceso,tiempo,true);
+        cout << linea5->head->getProceso();
+        cout << linea5->head->getTiempo();
+        cout << linea5->head->getEstado() << std::endl;
 
     }
     if (linea == "Linea 6"){
         this->linea6->insertarNodo(proceso,tiempo,true);
+        cout << linea6->head->getProceso();
+        cout << linea6->head->getTiempo();
+        cout << linea6->head->getEstado() << std::endl;
     }
 
 }
