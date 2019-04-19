@@ -177,6 +177,7 @@ void Lista::borrarCompletados() {
             if(tmp->next->next == nullptr){
                 tmp->next = nullptr;
                 this->largo--;
+                break;
             } else{
                 tmp->next = tmp->next->next;
                 this->largo--;
