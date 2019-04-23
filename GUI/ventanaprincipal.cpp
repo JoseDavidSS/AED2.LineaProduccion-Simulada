@@ -2,7 +2,8 @@
 #include "ui_ventanaprincipal.h"
 #include "../Logica/Lista.h"
 #include <iostream>
-
+#include <iostream>
+#include <QMessageBox>
 
 VentanaPrincipal::VentanaPrincipal(QWidget *parent) :
     QMainWindow(parent),
@@ -69,8 +70,6 @@ void VentanaPrincipal::agregarLineaProduccion() {
         this->contador++;
         ui->label_3->setText("6, no se pueden agregar mas.");
         ui->comboBox->addItem("Linea 6");
-
-
     }
 
     if (contador >= 7){
@@ -92,42 +91,45 @@ void VentanaPrincipal::agregarElementoLineaProduccion(string linea){
 
     if (linea == "Linea 1"){
         this->linea1->insertarNodo(proceso,tiempo,true);
-        cout << linea1->head->getProceso();
-        cout << linea1->head->getTiempo();
-        cout << linea1->head->getEstado() << std::endl;
+        this->linea1->mostrarLista();
+        ui->lineEdit->clear();
+        ui->lineEdit_2->clear();
+
     }
     if (linea == "Linea 2"){
         this->linea2->insertarNodo(proceso,tiempo,true);
-        cout << linea2->head->getProceso();
-        cout << linea2->head->getTiempo();
-        cout << linea2->head->getEstado() << std::endl;
+        this->linea2->mostrarLista();
+        ui->lineEdit->clear();
+        ui->lineEdit_2->clear();
+
     }
     if (linea == "Linea 3"){
         this->linea3->insertarNodo(proceso,tiempo,true);
-        cout << linea3->head->getProceso();
-        cout << linea3->head->getTiempo();
-        cout << linea3->head->getEstado() << std::endl;
+        this->linea3->mostrarLista();
+        ui->lineEdit->clear();
+        ui->lineEdit_2->clear();
 
     }
     if (linea == "Linea 4"){
         this->linea4->insertarNodo(proceso,tiempo,true);
-        cout << linea4->head->getProceso();
-        cout << linea4->head->getTiempo();
-        cout << linea4->head->getEstado() << std::endl;
+        this->linea4->mostrarLista();
+        ui->lineEdit->clear();
+        ui->lineEdit_2->clear();
 
     }
     if (linea == "Linea 5"){
         this->linea5->insertarNodo(proceso,tiempo,true);
-        cout << linea5->head->getProceso();
-        cout << linea5->head->getTiempo();
-        cout << linea5->head->getEstado() << std::endl;
+        this->linea5->mostrarLista();
+        ui->lineEdit->clear();
+        ui->lineEdit_2->clear();
 
     }
     if (linea == "Linea 6"){
         this->linea6->insertarNodo(proceso,tiempo,true);
-        cout << linea6->head->getProceso();
-        cout << linea6->head->getTiempo();
-        cout << linea6->head->getEstado() << std::endl;
+        this->linea6->mostrarLista();
+        ui->lineEdit->clear();
+        ui->lineEdit_2->clear();
+
     }
 
 }
@@ -135,4 +137,52 @@ void VentanaPrincipal::agregarElementoLineaProduccion(string linea){
 void VentanaPrincipal::on_pushButton_6_clicked()
 {
     agregarElementoLineaProduccion(ui->comboBox->currentText().toStdString());
+}
+
+void VentanaPrincipal::on_pushButton_5_clicked()
+{
+    if (this->contador == 2){
+        this->linea1->actualizar2();
+    }
+
+    if (this->contador == 3){
+        this->linea1->actualizar2();
+        this->linea2->actualizar2();
+    }
+
+    if (this->contador == 4){
+        this->linea1->actualizar2();
+        this->linea2->actualizar2();
+        this->linea3->actualizar2();
+    }
+
+    if (this->contador == 5){
+        this->linea1->actualizar2();
+        this->linea2->actualizar2();
+        this->linea3->actualizar2();
+        this->linea4->actualizar2();
+    }
+
+    if (this->contador == 6){
+        this->linea1->actualizar2();
+        this->linea2->actualizar2();
+        this->linea3->actualizar2();
+        this->linea4->actualizar2();
+        this->linea5->actualizar2();
+    }
+
+    if (this->contador == 7){
+        this->linea1->actualizar2();
+        this->linea2->actualizar2();
+        this->linea3->actualizar2();
+        this->linea4->actualizar2();
+        this->linea5->actualizar2();
+        this->linea6->actualizar2();
+    }
+
+}
+
+void VentanaPrincipal::on_pushButton_2_clicked()
+{
+    QMessageBox::information(this, tr("Hola"), tr("Este es el mensaje que quiero que salga a lo largo de la pantalla \n perro"));
 }
