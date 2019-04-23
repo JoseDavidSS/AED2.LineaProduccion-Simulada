@@ -107,8 +107,8 @@ void Lista::actualizar(){
     int i;
     int a =0;
     Nodo* tmp = this->head;
-    while(tmp!= NULL){
-        if(tmp->getEstado() == true)
+    while(tmp!= nullptr){
+        if(tmp->getEstado())
             tmp->setTiempo(tmp->getTiempo()-5);
             tmp = tmp->next;
             a++;
@@ -135,8 +135,8 @@ void Lista::actualizar(){
 }
 void Lista::verificarEstado(){
     Nodo* tmp = this->head;
-    while(tmp!= NULL){
-        if(tmp->getEstado() == true){
+    while(tmp!= nullptr){
+        if(tmp->getEstado()){
             tmp->setEstadoF();
             tmp->next->next->setEstadoT();
             break;
@@ -177,6 +177,7 @@ void Lista::borrarCompletados() {
             if(tmp->next->next == nullptr){
                 tmp->next = nullptr;
                 this->largo--;
+                break;
             } else{
                 tmp->next = tmp->next->next;
                 this->largo--;
