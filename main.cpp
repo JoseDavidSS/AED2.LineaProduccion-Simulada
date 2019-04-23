@@ -10,12 +10,16 @@ int main(int argc, char *argv[]){
 
     Lista* lista = new Lista;
     lista->mostrarLista();
-    lista->insertarNodo("a", 20);
-    lista->insertarNodo("b", 20);
-    lista->insertarNodo("c", 10);
+    lista->insertarNodo("a", 5);
+    lista->insertarNodo("b", 10);
+
+    cout<<lista->largo<<endl;
 
     lista->actualizar2();
     lista->actualizar2();
+    lista->actualizar2();
+
+
 
     lista->mostrarLista();
 

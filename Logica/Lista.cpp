@@ -149,11 +149,15 @@ void Lista::verificarEstado(){
 }
 
 void Lista::actualizar2() {
-    cout<<"______"<<endl;
-    this->actualizarVerdaderos();
-    this->borrarCompletados();
-    this->seleccionarVerdaderos();
-    this->mostrarLista();
+    if(this->largo != 0) {
+        cout << "______" << endl;
+        this->actualizarVerdaderos();
+        this->borrarCompletados();
+        this->seleccionarVerdaderos();
+        this->mostrarLista();
+    }else{
+        cout << "Lista Vacia" << endl;
+    }
 
 }
 
@@ -168,22 +172,28 @@ void Lista::actualizarVerdaderos() {
 }
 
 void Lista::borrarCompletados() {
-    if(this->head->tiempo <= 0){
+    if(this->head->tiempo <= 0 && this->largo != 1){
         this->head = this->head->next;
+        this->largo--;
     }
-    Nodo* tmp = this->head;
-    while(tmp->next != nullptr){
-        if(tmp->next->tiempo <= 0){
-            if(tmp->next->next == nullptr){
-                tmp->next = nullptr;
-                this->largo--;
-                break;
-            } else{
-                tmp->next = tmp->next->next;
-                this->largo--;
+    if(this->head->tiempo <= 0 && this->largo == 1){
+        this->head = nullptr;
+        this->largo--;
+    }else {
+        Nodo *tmp = this->head;
+        while (tmp->next != nullptr) {
+            if (tmp->next->tiempo <= 0) {
+                if (tmp->next->next == nullptr) {
+                    tmp->next = nullptr;
+                    this->largo--;
+                    break;
+                } else {
+                    tmp->next = tmp->next->next;
+                    this->largo--;
+                }
             }
+            tmp = tmp->next;
         }
-        tmp = tmp->next;
     }
 }
 
