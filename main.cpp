@@ -9,19 +9,22 @@
 int main(int argc, char *argv[]){
 
     Lista* lista = new Lista;
-    lista->mostrarLista();
-    lista->insertarNodo("a", 5);
-    lista->insertarNodo("b", 10);
+    Lista* lista2 = new Lista;
 
-    cout<<lista->largo<<endl;
+
+    lista->insertarNodo("a", 10);
+    lista->insertarNodo("b", 15);
+    lista2->insertarNodo("x", 25);
+    lista2->insertarNodo("y", 30);
 
     lista->actualizar2();
+    lista2->actualizar2();
+
     lista->actualizar2();
+    lista2->actualizar2();
+
     lista->actualizar2();
-
-
-
-    lista->mostrarLista();
+    lista2->actualizar2();
 
 
 

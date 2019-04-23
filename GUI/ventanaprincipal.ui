@@ -38,8 +38,8 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>390</y>
-      <width>281</width>
+      <y>290</y>
+      <width>481</width>
       <height>51</height>
      </rect>
     </property>
@@ -51,7 +51,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Mostrar lineas de produccion</string>
+     <string>Mostrar linea de produccion seleccionada</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_3">
@@ -220,7 +220,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>330</y>
+      <y>360</y>
       <width>281</width>
       <height>51</height>
      </rect>
