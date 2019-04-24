@@ -16,6 +16,7 @@ public:
 
     Nodo* head = nullptr;
     int largo = 0;
+    int tiempoTotal;
 
     int getLargo();
     void setLargo(int largo);
@@ -34,7 +35,6 @@ private:
     void seleccionarVerdaderos();
     void dormirPrimerVerdadero();
     int contarActivos();
-
 
 };
 

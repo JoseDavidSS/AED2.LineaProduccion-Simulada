@@ -6,6 +6,7 @@
 #include "../Logica/Lista.h"
 
 
+
 using namespace std;
 
 

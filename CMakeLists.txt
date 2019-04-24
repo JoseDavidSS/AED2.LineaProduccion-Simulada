@@ -8,5 +8,5 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 find_package(Qt5 COMPONENTS Core Gui Widgets REQUIRED)
 
-add_executable(Memoria-Virtual main.cpp Logica/Lista.cpp Logica/Lista.h Logica/Nodo.cpp Logica/Nodo.h GUI/ventanaprincipal.h GUI/ventanaprincipal.cpp GUI/ventanaprincipal.ui)
+add_executable(Memoria-Virtual main.cpp Logica/Lista.cpp Logica/Lista.h Logica/Nodo.cpp Logica/Nodo.h GUI/ventanaprincipal.h GUI/ventanaprincipal.cpp GUI/ventanaprincipal.ui GUI/information.h GUI/information.cpp)
 target_link_libraries(Memoria-Virtual Qt5::Core Qt5::Gui Qt5::Widgets)

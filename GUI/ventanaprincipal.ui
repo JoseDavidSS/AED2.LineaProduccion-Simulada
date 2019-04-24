@@ -38,7 +38,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>290</y>
+      <y>220</y>
       <width>481</width>
       <height>51</height>
      </rect>
@@ -52,26 +52,6 @@
     </property>
     <property name="text">
      <string>Mostrar linea de produccion seleccionada</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>220</y>
-      <width>481</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Mostrar tiempos de procesos de linea seleccionada</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_4">
@@ -220,7 +200,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>360</y>
+      <y>290</y>
       <width>281</width>
       <height>51</height>
      </rect>

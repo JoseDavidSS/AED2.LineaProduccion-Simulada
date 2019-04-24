@@ -2,8 +2,9 @@
 #include "ui_ventanaprincipal.h"
 #include "../Logica/Lista.h"
 #include <iostream>
-#include <iostream>
 #include <QMessageBox>
+#include "information.h"
+
 
 VentanaPrincipal::VentanaPrincipal(QWidget *parent) :
     QMainWindow(parent),
@@ -25,7 +26,6 @@ void VentanaPrincipal::agregarLineaProduccion() {
         this->contador++;
         ui->label_3->setText("1");
         ui->comboBox->addItem("Linea 1");
-
 
     }
 
@@ -184,5 +184,7 @@ void VentanaPrincipal::on_pushButton_5_clicked()
 
 void VentanaPrincipal::on_pushButton_2_clicked()
 {
-    QMessageBox::information(this, tr("Hola"), tr("Este es el mensaje que quiero que salga a lo largo de la pantalla \n perro"));
+    Information information;
+    information.setModal(true);
+    information.exec();
 }

@@ -11,6 +11,7 @@ void Lista::insertarNodo(string proceso, int tiempo, bool estado){
     if (this->head == nullptr){
         this->head = new Nodo(proceso, tiempo, estado);
         this->largo++;
+        this->tiempoTotal = this->tiempoTotal + tiempo;
 
     }else{
 
@@ -21,6 +22,7 @@ void Lista::insertarNodo(string proceso, int tiempo, bool estado){
 
         tmp->next = new Nodo(proceso, tiempo, estado);
         this->largo++;
+        this->tiempoTotal = this->tiempoTotal + tiempo;
     }
 }
 
@@ -28,6 +30,7 @@ void Lista::insertarNodo(string proceso, int tiempo) {
     if (this->head == nullptr) {
         this->head = new Nodo(proceso, tiempo, true);
         this->largo++;
+        this->tiempoTotal = this->tiempoTotal + tiempo;
     }else{
         Nodo* tmp = this->head;
         int i = this->contarActivos();
@@ -45,6 +48,7 @@ void Lista::insertarNodo(string proceso, int tiempo) {
 
         tmp->next = new Nodo(proceso, tiempo, true);
         this->largo++;
+        this->tiempoTotal = this->tiempoTotal + tiempo;
     }
 
 }
@@ -56,6 +60,7 @@ void Lista::eliminarNodo(string proceso){
         printf("No hay procesos para eliminar");
 
     }else if(this->head->getProceso() == proceso){
+        this->tiempoTotal = this->tiempoTotal - this->head->getTiempo();
         this->head = this->head->next;
         this->largo--;
 
@@ -64,6 +69,7 @@ void Lista::eliminarNodo(string proceso){
         while (tmp->next != nullptr){
             if (tmp->next->getProceso() == proceso){
                 tmp->next = tmp->next->next;
+                this->tiempoTotal = this->tiempoTotal - this->head->getTiempo();
                 this->largo--;
                 break;
             }else{
@@ -166,6 +172,7 @@ void Lista::actualizarVerdaderos() {
     while(tmp!= nullptr){
         if(tmp->getEstado() == 1){
             tmp->setTiempo(tmp->getTiempo() - 5);
+            this->tiempoTotal = this->tiempoTotal - 5;
         }
         tmp = tmp->next;
     }
