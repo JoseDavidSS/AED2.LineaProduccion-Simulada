@@ -312,9 +312,9 @@
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>250</x>
       <y>370</y>
-      <width>31</width>
+      <width>101</width>
       <height>41</height>
      </rect>
     </property>
@@ -332,9 +332,9 @@
    <widget class="QLabel" name="label_10">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>250</x>
       <y>400</y>
-      <width>31</width>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
@@ -352,9 +352,9 @@
    <widget class="QLabel" name="label_11">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>250</x>
       <y>430</y>
-      <width>31</width>
+      <width>91</width>
       <height>41</height>
      </rect>
     </property>
@@ -372,9 +372,9 @@
    <widget class="QLabel" name="label_12">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>250</x>
       <y>460</y>
-      <width>31</width>
+      <width>101</width>
       <height>41</height>
      </rect>
     </property>
@@ -392,9 +392,9 @@
    <widget class="QLabel" name="label_13">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>250</x>
       <y>490</y>
-      <width>31</width>
+      <width>101</width>
       <height>41</height>
      </rect>
     </property>
@@ -412,9 +412,9 @@
    <widget class="QLabel" name="label_14">
     <property name="geometry">
      <rect>
-      <x>290</x>
+      <x>250</x>
       <y>520</y>
-      <width>31</width>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
@@ -452,9 +452,9 @@
    <widget class="QLabel" name="label_16">
     <property name="geometry">
      <rect>
-      <x>620</x>
+      <x>580</x>
       <y>490</y>
-      <width>31</width>
+      <width>101</width>
       <height>41</height>
      </rect>
     </property>
@@ -472,9 +472,9 @@
    <widget class="QLabel" name="label_17">
     <property name="geometry">
      <rect>
-      <x>620</x>
+      <x>580</x>
       <y>460</y>
-      <width>31</width>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
@@ -492,9 +492,9 @@
    <widget class="QLabel" name="label_18">
     <property name="geometry">
      <rect>
-      <x>620</x>
+      <x>580</x>
       <y>430</y>
-      <width>31</width>
+      <width>91</width>
       <height>41</height>
      </rect>
     </property>
@@ -512,9 +512,9 @@
    <widget class="QLabel" name="label_19">
     <property name="geometry">
      <rect>
-      <x>620</x>
+      <x>580</x>
       <y>370</y>
-      <width>31</width>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
@@ -532,9 +532,9 @@
    <widget class="QLabel" name="label_20">
     <property name="geometry">
      <rect>
-      <x>620</x>
+      <x>580</x>
       <y>520</y>
-      <width>31</width>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
@@ -552,9 +552,9 @@
    <widget class="QLabel" name="label_21">
     <property name="geometry">
      <rect>
-      <x>620</x>
+      <x>580</x>
       <y>400</y>
-      <width>31</width>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
@@ -569,58 +569,8 @@
      <string>-</string>
     </property>
    </widget>
-   <widget class="QLabel" name="teslaLabel">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>410</y>
-      <width>101</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap resource="assets/resources.qrc">:/main/TeslaIcon.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="teslaButton">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>410</y>
-      <width>101</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border: 0px</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="assets/resources.qrc">
-      <normaloff>:/main/TeslaIcon.png</normaloff>:/main/TeslaIcon.png</iconset>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>100</width>
-      <height>100</height>
-     </size>
-    </property>
-    <property name="checkable">
-     <bool>true</bool>
-    </property>
-   </widget>
   </widget>
  </widget>
- <resources>
-  <include location="assets/resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
