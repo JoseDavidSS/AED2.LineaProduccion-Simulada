@@ -142,17 +142,53 @@ void VentanaPrincipal::on_pushButton_5_clicked()
 {
     if (this->contador == 2){
         this->linea1->actualizar2();
+        ui->label_9->setText("-");
+        ui->label_19->setText("-");
+        ui->label_10->setText("-");
+        ui->label_21->setText("-");
+        ui->label_11->setText("-");
+        ui->label_18->setText("-");
+        ui->label_12->setText("-");
+        ui->label_17->setText("-");
+        ui->label_13->setText("-");
+        ui->label_16->setText("-");
+        ui->label_14->setText("-");
+        ui->label_20->setText("-");
     }
 
     if (this->contador == 3){
         this->linea1->actualizar2();
         this->linea2->actualizar2();
+        ui->label_9->setText("-");
+        ui->label_19->setText("-");
+        ui->label_10->setText("-");
+        ui->label_21->setText("-");
+        ui->label_11->setText("-");
+        ui->label_18->setText("-");
+        ui->label_12->setText("-");
+        ui->label_17->setText("-");
+        ui->label_13->setText("-");
+        ui->label_16->setText("-");
+        ui->label_14->setText("-");
+        ui->label_20->setText("-");
     }
 
     if (this->contador == 4){
         this->linea1->actualizar2();
         this->linea2->actualizar2();
         this->linea3->actualizar2();
+        ui->label_9->setText("-");
+        ui->label_19->setText("-");
+        ui->label_10->setText("-");
+        ui->label_21->setText("-");
+        ui->label_11->setText("-");
+        ui->label_18->setText("-");
+        ui->label_12->setText("-");
+        ui->label_17->setText("-");
+        ui->label_13->setText("-");
+        ui->label_16->setText("-");
+        ui->label_14->setText("-");
+        ui->label_20->setText("-");
     }
 
     if (this->contador == 5){
@@ -160,6 +196,18 @@ void VentanaPrincipal::on_pushButton_5_clicked()
         this->linea2->actualizar2();
         this->linea3->actualizar2();
         this->linea4->actualizar2();
+        ui->label_9->setText("-");
+        ui->label_19->setText("-");
+        ui->label_10->setText("-");
+        ui->label_21->setText("-");
+        ui->label_11->setText("-");
+        ui->label_18->setText("-");
+        ui->label_12->setText("-");
+        ui->label_17->setText("-");
+        ui->label_13->setText("-");
+        ui->label_16->setText("-");
+        ui->label_14->setText("-");
+        ui->label_20->setText("-");
     }
 
     if (this->contador == 6){
@@ -168,6 +216,18 @@ void VentanaPrincipal::on_pushButton_5_clicked()
         this->linea3->actualizar2();
         this->linea4->actualizar2();
         this->linea5->actualizar2();
+        ui->label_9->setText("-");
+        ui->label_19->setText("-");
+        ui->label_10->setText("-");
+        ui->label_21->setText("-");
+        ui->label_11->setText("-");
+        ui->label_18->setText("-");
+        ui->label_12->setText("-");
+        ui->label_17->setText("-");
+        ui->label_13->setText("-");
+        ui->label_16->setText("-");
+        ui->label_14->setText("-");
+        ui->label_20->setText("-");
     }
 
     if (this->contador == 7){
@@ -177,11 +237,775 @@ void VentanaPrincipal::on_pushButton_5_clicked()
         this->linea4->actualizar2();
         this->linea5->actualizar2();
         this->linea6->actualizar2();
+        ui->label_9->setText("-");
+        ui->label_19->setText("-");
+        ui->label_10->setText("-");
+        ui->label_21->setText("-");
+        ui->label_11->setText("-");
+        ui->label_18->setText("-");
+        ui->label_12->setText("-");
+        ui->label_17->setText("-");
+        ui->label_13->setText("-");
+        ui->label_16->setText("-");
+        ui->label_14->setText("-");
+        ui->label_20->setText("-");
     }
 
 }
 
-void VentanaPrincipal::on_pushButton_2_clicked()
-{
+void VentanaPrincipal::on_pushButton_2_clicked(){
+    string linea = ui->comboBox->currentText().toStdString();
+    if (linea == "Linea 1"){
 
+        Nodo* tmp = this->linea1->head;
+        while (tmp != NULL) {
+            if (this->linea1->largo == 0){
+                printf("nada");
+                break;
+            }
+            if (this->linea1->largo == 1){
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+            }
+            if (this->linea1->largo == 2){
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+            }
+            if (this->linea1->largo == 3){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+            }
+            if (this->linea1->largo == 4){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+            }
+            if (this->linea1->largo == 5){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+
+                ui->label_13->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo5 = to_string(tmp->getTiempo());
+                ui->label_16->setText(QString::fromStdString(tiempo5));
+                tmp = tmp->next;
+            }
+            if (this->linea1->largo == 6){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+
+                ui->label_13->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo5 = to_string(tmp->getTiempo());
+                ui->label_16->setText(QString::fromStdString(tiempo5));
+                tmp = tmp->next;
+
+                ui->label_14->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo6 = to_string(tmp->getTiempo());
+                ui->label_20->setText(QString::fromStdString(tiempo6));
+                tmp = tmp->next;
+            }
+        }
+    }
+
+    if (linea == "Linea 2"){
+
+        Nodo* tmp = this->linea2->head;
+        while (tmp != NULL) {
+            if (this->linea2->largo == 0){
+                printf("nada");
+                break;
+            }
+            if (this->linea2->largo == 1){
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+            }
+            if (this->linea2->largo == 2){
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+            }
+            if (this->linea2->largo == 3){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+            }
+            if (this->linea2->largo == 4){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+            }
+            if (this->linea2->largo == 5){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+
+                ui->label_13->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo5 = to_string(tmp->getTiempo());
+                ui->label_16->setText(QString::fromStdString(tiempo5));
+                tmp = tmp->next;
+            }
+            if (this->linea2->largo == 6){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+
+                ui->label_13->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo5 = to_string(tmp->getTiempo());
+                ui->label_16->setText(QString::fromStdString(tiempo5));
+                tmp = tmp->next;
+
+                ui->label_14->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo6 = to_string(tmp->getTiempo());
+                ui->label_20->setText(QString::fromStdString(tiempo6));
+                tmp = tmp->next;
+            }
+        }
+    }
+    if (linea == "Linea 3"){
+
+        Nodo* tmp = this->linea3->head;
+        while (tmp != NULL) {
+            if (this->linea3->largo == 0){
+                printf("nada");
+                break;
+            }
+            if (this->linea3->largo == 1){
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+            }
+            if (this->linea3->largo == 2){
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+            }
+            if (this->linea3->largo == 3){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+            }
+            if (this->linea3->largo == 4){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+            }
+            if (this->linea3->largo == 5){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+
+                ui->label_13->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo5 = to_string(tmp->getTiempo());
+                ui->label_16->setText(QString::fromStdString(tiempo5));
+                tmp = tmp->next;
+            }
+            if (this->linea3->largo == 6){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+
+                ui->label_13->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo5 = to_string(tmp->getTiempo());
+                ui->label_16->setText(QString::fromStdString(tiempo5));
+                tmp = tmp->next;
+
+                ui->label_14->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo6 = to_string(tmp->getTiempo());
+                ui->label_20->setText(QString::fromStdString(tiempo6));
+                tmp = tmp->next;
+            }
+        }
+    }
+    if (linea == "Linea 4"){
+
+        Nodo* tmp = this->linea4->head;
+        while (tmp != NULL) {
+            if (this->linea4->largo == 0){
+                printf("nada");
+                break;
+            }
+            if (this->linea4->largo == 1){
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+            }
+            if (this->linea4->largo == 2){
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+            }
+            if (this->linea4->largo == 3){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+            }
+            if (this->linea4->largo == 4){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+            }
+            if (this->linea4->largo == 5){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+
+                ui->label_13->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo5 = to_string(tmp->getTiempo());
+                ui->label_16->setText(QString::fromStdString(tiempo5));
+                tmp = tmp->next;
+            }
+            if (this->linea4->largo == 6){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+
+                ui->label_13->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo5 = to_string(tmp->getTiempo());
+                ui->label_16->setText(QString::fromStdString(tiempo5));
+                tmp = tmp->next;
+
+                ui->label_14->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo6 = to_string(tmp->getTiempo());
+                ui->label_20->setText(QString::fromStdString(tiempo6));
+                tmp = tmp->next;
+            }
+        }
+    }
+    if (linea == "Linea 5"){
+
+        Nodo* tmp = this->linea5->head;
+        while (tmp != NULL) {
+            if (this->linea5->largo == 0){
+                printf("nada");
+                break;
+            }
+            if (this->linea5->largo == 1){
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+            }
+            if (this->linea5->largo == 2){
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+            }
+            if (this->linea5->largo == 3){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+            }
+            if (this->linea5->largo == 4){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+            }
+            if (this->linea5->largo == 5){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+
+                ui->label_13->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo5 = to_string(tmp->getTiempo());
+                ui->label_16->setText(QString::fromStdString(tiempo5));
+                tmp = tmp->next;
+            }
+            if (this->linea5->largo == 6){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+
+                ui->label_13->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo5 = to_string(tmp->getTiempo());
+                ui->label_16->setText(QString::fromStdString(tiempo5));
+                tmp = tmp->next;
+
+                ui->label_14->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo6 = to_string(tmp->getTiempo());
+                ui->label_20->setText(QString::fromStdString(tiempo6));
+                tmp = tmp->next;
+            }
+        }
+    }
+    if (linea == "Linea 6"){
+
+        Nodo* tmp = this->linea6->head;
+        while (tmp != NULL) {
+            if (this->linea6->largo == 0){
+                printf("nada");
+                break;
+            }
+            if (this->linea6->largo == 1){
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+            }
+            if (this->linea6->largo == 2){
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+            }
+            if (this->linea6->largo == 3){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+            }
+            if (this->linea6->largo == 4){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+            }
+            if (this->linea6->largo == 5){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+
+                ui->label_13->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo5 = to_string(tmp->getTiempo());
+                ui->label_16->setText(QString::fromStdString(tiempo5));
+                tmp = tmp->next;
+            }
+            if (this->linea6->largo == 6){
+
+                ui->label_9->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo = to_string(tmp->getTiempo());
+                ui->label_19->setText(QString::fromStdString(tiempo));
+                tmp = tmp->next;
+
+                ui->label_10->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo2 = to_string(tmp->getTiempo());
+                ui->label_21->setText(QString::fromStdString(tiempo2));
+                tmp = tmp->next;
+
+                ui->label_11->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo3 = to_string(tmp->getTiempo());
+                ui->label_18->setText(QString::fromStdString(tiempo3));
+                tmp = tmp->next;
+
+                ui->label_12->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo4 = to_string(tmp->getTiempo());
+                ui->label_17->setText(QString::fromStdString(tiempo4));
+                tmp = tmp->next;
+
+                ui->label_13->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo5 = to_string(tmp->getTiempo());
+                ui->label_16->setText(QString::fromStdString(tiempo5));
+                tmp = tmp->next;
+
+                ui->label_14->setText(QString::fromStdString(tmp->getProceso()));
+                string tiempo6 = to_string(tmp->getTiempo());
+                ui->label_20->setText(QString::fromStdString(tiempo6));
+                tmp = tmp->next;
+            }
+        }
+    }
 }
+
+
